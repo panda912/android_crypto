@@ -1,0 +1,4 @@
+include ':app'
+include ':lib_mbedtls_crypto'
+include ':lib_openssl_crypto'
+rootProject.name = "android_crypto"

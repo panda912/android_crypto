@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_plain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="plain text"
+        android:text="1234567890123456"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_cipher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="cipher text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_plain" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_aes_encrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aes encrypt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_cipher" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_aes_decrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aes decrypt"
+        app:layout_constraintStart_toEndOf="@id/btn_aes_encrypt"
+        app:layout_constraintTop_toBottomOf="@id/et_cipher" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_des_encrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="des encrypt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_aes_encrypt" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_des_decrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="des decrypt"
+        app:layout_constraintStart_toEndOf="@id/btn_aes_encrypt"
+        app:layout_constraintTop_toBottomOf="@id/btn_aes_decrypt" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="压测"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
